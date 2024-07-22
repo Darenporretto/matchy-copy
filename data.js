@@ -11,19 +11,30 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+var animal = {};
+animal.species = 'Vampire';
+animal['name'] = 'Lestat';
+animal.noises = [];
+console.log(animal);
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+var noises = []
+noises[0] = 'snarl';
+noises.push('hiss');
+noises.unshift('growl');
+noises[noises.length] = 'shriek';
+console.log(noises.length);
+console.log(noises[noises.length - 1]);
+console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+animal['noises'] = noises;
+animal.noises.push('roar');
+console.log(animal);
 
 
 /* *******************************************************************
@@ -48,7 +59,37 @@
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var animals = [];
+animals.push(Vampire);
 
+console.log(animals);
+
+var duck = {
+  species: 'duck',
+  name: 'Howard',
+  noises: ['quack', 'honk', 'sneeze', 'woosh']
+};
+
+animals.push(duck);
+
+console.log(animals);
+
+var werewolf = {
+  species: 'werewolf',
+  name: 'David',
+  noises: ['howl', 'bark']
+};
+
+var witch = {
+  species: 'witch',
+  name: 'Rowan Mayfair',
+  noises: ['cackle', 'chant']
+};
+
+animals.push(werewolf, witch);
+
+console.log(animals);
+console.log(animals.length);
 
 
 //////////////////////////////////////////////////////////////////////
