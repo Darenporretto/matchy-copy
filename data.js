@@ -96,7 +96,23 @@ console.log(animals.length);
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var friends =[];
 
+function getRandom(arr) {
+  return Math.floor(Math.random()) * arr.length;
+}
+
+var randomIndex = getRandom(animals);
+var randomAnimal = animals[randomIndex];
+friends.push(randomAnimal.name);
+
+console.log(friends);
+
+var chosenAnimal = animal[0];
+chosenAnimal.friends = friends;
+
+console.log(chosenAnimal);
+console.log(animals);
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
