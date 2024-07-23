@@ -60,7 +60,7 @@ console.log(animal);
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var animals = [];
-animals.push(Vampire);
+animals.push(animal);
 
 console.log(animals);
 
@@ -99,14 +99,15 @@ console.log(animals.length);
 var friends =[];
 
 function getRandom(arr) {
-  return Math.floor(Math.random()) * arr.length;
+  var randomIndex = Math.floor(Math.random()) * arr.length;
+  return arr[randomIndex];
 }
 
-var randomIndex = getRandom(animals);
-var randomAnimal = animals[randomIndex];
+var randomAnimal = getRandom(animals);
 friends.push(randomAnimal.name);
 
 console.log(friends);
+animals[0].friends = friends;
 
 var chosenAnimal = animal[0];
 chosenAnimal.friends = friends;
