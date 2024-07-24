@@ -16,10 +16,10 @@
 function search(animals, name) {
     for (let i = 0; i < animals.length; i++) {
         if (animals[i].name === name) {
-            return animals[i]; // return the animal object if found
+            return animals[i]; //return the animal object if found
         }
     }
-    return null; // return null if the animal with given name isnt found
+    return null; //return null if the animal with given name isnt found
 }
 
 
