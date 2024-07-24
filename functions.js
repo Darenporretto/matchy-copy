@@ -59,15 +59,15 @@ function add(animals, animal) {
     //if the animal object has name and species properties with valid lengths
     if (animal.name.length > 0 && animal.species.length > 0) {
         
-        let isUnique = true;
+        let isMonster = true;
         for (let i = 0; i < animals.length; i++) {
             if (animals[i].name === animal.name) {
-                isUnique = false;
+                isMonster = false;
                 break;
             }
         }
         //whenname is unique add the animal to the animals array
-        if (isUnique) {
+        if (isMonster) {
             animals.push(animal);
         }
     }
