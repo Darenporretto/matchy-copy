@@ -66,7 +66,7 @@ function add(animals, animal) {
                 break;
             }
         }
-        //whenname is unique add the animal to the animals array
+        //whenname is monster add the animal to the animals array
         if (isMonster) {
             animals.push(animal);
         }
