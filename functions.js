@@ -32,23 +32,52 @@ function replace(animals, name, replacement) {
     for (let i = 0; i < animals.length; i++) {
         //check for matching provided names
         if (animals[i].name === name) {
-            //replace object with replacement
-            
+            //replace entire object with replacement
+            animals[i] =replacement;
+            return;
+            //exit the function after replacement. if no match found do nothing
         }
     }
 }
-
-
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-
+function remove(animals, name) {
+    //iterate over the animals array
+    for (let i = 0; i < animals.length; i++) {
+        //check if anmal name matches provided
+        if (animals[i].name === name) {
+            //remove the animal from the array usinf splice
+            animals.splice(i, 1);
+            //exit function after removal, if no match is found do nothing
+        }
+    }
+}
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function add(animals, animal) {
+    //check if animal has name property and its length is > 0
+    if (!animal.name || animal.name.length === 0) {
+      return false; //failed due to invalid name
+    }
+    
+    //check if animal has species property and length is > 0
+    if (!animal.species || animal.species.length === 0) {
+      return false; //failed due to invalid species
+    }
+    
+    //check for unique name
+    for (let i = 0; i < animals.length; i++) {
+      if (animals[i].name === animal.name) {
+        return false; //failed bc of dup name
+      }
+    }
+    
+    //add new animal object to the array
+    animals.push(animal);
+    return true; //GREAT SCOTT!!
+  }
 
 
 /**
