@@ -12,13 +12,31 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-
+function search(animals, name) {
+    //iterate over an array of animals
+    for (let i = 0; i < animals.length; i++) {
+        //check if current name matches provided
+        if (animals[i].name === name) {
+            //return animal if match found
+            return animals[i];
+        }
+    }
+    //return null if not found
+    return null;
+}
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function replace(animals, name, replacement) {
+    //iterarte over array of animals
+    for (let i = 0; i < animals.length; i++) {
+        //check for matching provided names
+        if (animals[i].name === name) {
+            //replace object with replacement
+            
+        }
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////
